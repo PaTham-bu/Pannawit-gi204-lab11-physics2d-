@@ -1527,6 +1527,7 @@ GameObject:
   - component: {fileID: 348948136}
   - component: {fileID: 348948137}
   - component: {fileID: 348948138}
+  - component: {fileID: 348948139}
   m_Layer: 0
   m_Name: Top (2)
   m_TagString: Ground
@@ -1639,7 +1640,7 @@ EdgeCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -1651,6 +1652,24 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!252 &348948139
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348948135}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 7
+  m_SpeedVariation: 5
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 1
+  m_UseBounce: 1
 --- !u!1 &354255346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,7 +6567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f256917e3ba8fa540a4850408b362bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  Speed: 5
+  speed: 3
   JumpForce: 480
   IsJumping: 1
 --- !u!1 &1348367957
@@ -7293,6 +7312,7 @@ GameObject:
   - component: {fileID: 1500863255}
   - component: {fileID: 1500863256}
   - component: {fileID: 1500863257}
+  - component: {fileID: 1500863258}
   m_Layer: 0
   m_Name: Water_0
   m_TagString: Untagged
@@ -7404,8 +7424,8 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -7420,6 +7440,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 2.06}
   m_EdgeRadius: 0
+--- !u!253 &1500863258
+BuoyancyEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500863254}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.6
+  m_Density: 2
+  m_LinearDamping: 5
+  m_AngularDamping: 5
+  m_FlowAngle: 45
+  m_FlowMagnitude: 3
+  m_FlowVariation: 1
 --- !u!1 &1506619023
 GameObject:
   m_ObjectHideFlags: 0

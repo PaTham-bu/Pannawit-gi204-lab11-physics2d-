@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float Speed; // public variable use Pascal casing
-    float move;         // private variable
-
-    public float JumpForce;
-    public bool IsJumping;
 
     Rigidbody2D rb2d;
+    Vector2 moveInput;
+
+    [SerializeField] float speed; // public variable use Pascal casing
+    float move;         // private variable
+
+    [SerializeField] public float JumpForce;
+    [SerializeField] public bool IsJumping;
+
+    
 
     void Start()
     {
@@ -17,10 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        move = Input.GetAxis("Horizontal"); // x - axis
+        // walk with addforce
+        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        rb2d.AddForce(moveInput * speed);
+
+
+        /*move = Input.GetAxis("Horizontal"); // x - axis
 
         // use rigidbody2d to move left and right (x-axis)
-        rb2d.linearVelocity = new Vector2(move * Speed, rb2d.linearVelocity.y);
+        rb2d.linearVelocity = new Vector2(move * Speed, rb2d.linearVelocity.y);*/
 
         // jump
         if (Input.GetButtonDown("Jump") && !IsJumping)
