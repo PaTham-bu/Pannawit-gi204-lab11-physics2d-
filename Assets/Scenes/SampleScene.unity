@@ -699,7 +699,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216375437}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1419,7 +1419,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.4725275, y: 0.50137544}
+  - {x: -0.4725275, y: 0.45766225}
   - {x: 1.5275973, y: -1.5117064}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -2270,7 +2270,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474852125}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2431,7 +2431,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475898574}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -6370,6 +6370,7 @@ GameObject:
   - component: {fileID: 1319037713}
   - component: {fileID: 1319037715}
   - component: {fileID: 1319037716}
+  - component: {fileID: 1319037717}
   m_Layer: 0
   m_Name: Player_Idle
   m_TagString: Untagged
@@ -6534,6 +6535,20 @@ PolygonCollider2D:
       - {x: 0.3782425, y: 0.3104707}
       - {x: 0.18992567, y: 0.5020293}
   m_UseDelaunayMesh: 1
+--- !u!114 &1319037717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319037712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f256917e3ba8fa540a4850408b362bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  Speed: 2
+  JumpForce: 3
 --- !u!1 &1348367957
 GameObject:
   m_ObjectHideFlags: 0
